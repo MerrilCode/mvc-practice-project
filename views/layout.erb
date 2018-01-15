@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @title %></title>
+
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="<%=url('/css/master.css') %>">
+   <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="<%= url('js/app.js') %>" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+  
+   <%= erb(:'partials/navigation', :layout => false) %>
+  
+   <!-- our template content will be injected here -->
+   <%= yield %>
+   
+</body>
+</html>

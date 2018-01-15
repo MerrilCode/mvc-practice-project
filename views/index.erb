@@ -1,0 +1,11 @@
+<h1>Welcome to the homepage</h1>
+
+<% @genes.each do |gene| %> <!-- Each Post objects id, title and body is displayed -->
+<div class="container">
+	<div class="row">
+		<div class="col-lg-3 col-md-6 col-sm-12">
+  			<h3><a href="/<%= gene.id %>"><%= gene.name %></a></h3> <!-- id is displayed on url get '/id' -->
+  		</div>
+  	</div>
+</div>
+<% end %>
