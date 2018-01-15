@@ -7,16 +7,16 @@
 	</div>
 	<div class="row">
 		<div class="col-lg-3 col-md-3 col-sm-3">
-			<p><%= @gene.protein %></p>
+			<p>Protein encoded: <%= @gene.protein %></p>
 		</div>
 		<div class="col-lg-3 col-md-3 col-sm-3">
-			<p><%= @gene.chromosome %></p>
+			<p>Chromosome number: <%= @gene.chromosome %></p>
 		</div>
 		<div class="col-lg-3 col-md-3 col-sm-3">
-			<p><%= @gene.location %></p>
+			<p>Gene location<%= @gene.location %></p>
 		</div>
 		<div class="col-lg-3 col-md-3 col-sm-3">
-			<p><%= @gene.species %></p>
+			<p>Species: <%= @gene.species %></p>
 		</div>
 		
 	</div>
@@ -24,12 +24,16 @@
 	</div>
 	<div class="row">
 		<div class="col-lg-6 col-md-6 col-sm-6">
-			<a href="/<%= @gene.id %>/edit">edit</a>
+			<a href="/<%= @gene.id %>/edit"><button type="button" class="btn btn-primary">Edit gene information</button></a>
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-6">
 			<form action="/<%= @gene.id %>" method="POST">
-			  <input type="hidden" name="_method" value="DELETE">
-			  <input type="submit" value="Delete">
+				<div class="form-group">        
+	      			<div class="col-sm-offset-2 col-sm-10">
+	      				<input type="hidden" name="_method" value="DELETE">
+	        			<button type="submit" class="btn btn-danger" value="delete">Delete gene</button>
+	      			</div>
+	      		</div>
 			</form>
 		</div> 
 	</div>

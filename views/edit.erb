@@ -1,36 +1,44 @@
-
-<h1>Edit</h1>
-
-<form action="/<%= @gene.id %>" method="POST">
-  <div>
-    <label>Name</label>
-    <input type="text" name="name" placeholder="Enter a name" value="<%= @gene.name %>">
-  </div>
-
-  <div>
-    <label>Protein</label>
-    <textarea name="protein"><%= @gene.protein %></textarea>
-  </div>
-
-   <div>
-    <label>Chromosome</label>
-    <textarea name="chromosome"><%= @gene.chromosome %></textarea>
-  </div>
-
-   <div>
-    <label>Location</label>
-    <textarea name="location"><%= @gene.location %></textarea>
-  </div>
-
-   <div>
-    <label>Species</label>
-    <textarea name="species"><%= @gene.species %></textarea>
-  </div>
-
-  <div>
-    <input type="submit" value="Save Gene">
-  </div>
-  <% if(@gene.id) %>
+<div class="container">
+  <form class="form-horizontal" action="/<%= @gene.id %>" method="POST">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="name">Name:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" value="<%= @gene.name %>">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="protein">Protein:</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="protein" placeholder="Protein name" name="protein" value="<%= @gene.protein %>">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="chromosome">Chromosome:</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="chromosome" placeholder="Chromosome no:" name="chromosome" value="<%= @gene.chromosome %>">
+      </div>
+    </div>
+     <div class="form-group">
+      <label class="control-label col-sm-2" for="location">Location:</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="location" placeholder="Gene loc:" name="location" value="<%= @gene.location %>">
+      </div>
+    </div>
+     <div class="form-group">
+      <label class="control-label col-sm-2" for="species">Species:</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="species" placeholder="Species:" name="species" value="<%= @gene.species %>">
+      </div>
+    </div>
+    
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Save gene</button>
+      </div>
+    </div>
+    <% if(@gene.id) %>
     <input type="hidden" name="_method" value="PUT">
-  <% end %>
-</form>
+    <% end %>
+  </form>
+</div>
+
