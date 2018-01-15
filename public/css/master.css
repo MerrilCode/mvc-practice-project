@@ -4,3 +4,10 @@ body {
 	color:white;
 
 }
+.gene_list {
+	color: white;
+}
+#gene_view {
+	background-image: url('../images/gene_show.jpeg');
+	font-size: 20px;
+}

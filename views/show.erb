@@ -1,5 +1,5 @@
 
-<div class="container">
+<div class="container" id="gene_view">
 	<div class="row">
 		<div class="col-lg-12 col-md-12 col-sm-12">
 			<h1><%= @gene.name %></h1>
@@ -13,28 +13,24 @@
 			<p>Chromosome number: <%= @gene.chromosome %></p>
 		</div>
 		<div class="col-lg-3 col-md-3 col-sm-3">
-			<p>Gene location<%= @gene.location %></p>
+			<p>Gene location: <%= @gene.location %></p>
 		</div>
 		<div class="col-lg-3 col-md-3 col-sm-3">
 			<p>Species: <%= @gene.species %></p>
 		</div>
-		
-	</div>
 
 	</div>
-	<div class="row">
-		<div class="col-lg-6 col-md-6 col-sm-6">
+	<div class="row center-block">
+		<div class="col-lg-12 col-md-12 col-sm-12">
 			<a href="/<%= @gene.id %>/edit"><button type="button" class="btn btn-primary">Edit gene information</button></a>
 		</div>
-		<div class="col-lg-6 col-md-6 col-sm-6">
-			<form action="/<%= @gene.id %>" method="POST">
-				<div class="form-group">        
-	      			<div class="col-sm-offset-2 col-sm-10">
-	      				<input type="hidden" name="_method" value="DELETE">
-	        			<button type="submit" class="btn btn-danger" value="delete">Delete gene</button>
-	      			</div>
-	      		</div>
-			</form>
-		</div> 
 	</div>
+	<div class="row center-block">
+		<div class="col-lg-12 col-md-12 col-sm-12">
+			<form action="/<%= @gene.id %>" method="POST">    
+  				<input type="hidden" name="_method" value="DELETE">
+    			<button type="submit" class="btn btn-danger" value="delete">Delete gene</button>
+			</form>
+		</div>
+	</div> 
 </div>

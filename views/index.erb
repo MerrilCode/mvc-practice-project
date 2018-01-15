@@ -3,9 +3,9 @@
 		<h1>List of genes</h1>
 	</div>
 	<% @genes.each do |gene| %> <!-- Each Post objects id, title and body is displayed -->
-		<div class="row">
+		<div class="row gene_list" >
 			<div class="col-lg-3 col-md-6 col-sm-12">
-	  			<h3><a href="/<%= gene.id %>"><%= gene.name %></a></h3> <!-- id is displayed on url get '/id' -->
+	  			<h3><a href="/<%= gene.id %>" id="gene_show"><%= gene.name %></a></h3> <!-- id is displayed on url get '/id' -->
 	  		</div>
 	  	</div>
 	<% end %>
